@@ -36,7 +36,7 @@
     function initialize() {
         // initialise the google map
         var map = new google.maps.Map(document.getElementById('map_canvas'), {
-            center: new google.maps.LatLng(39.991851471423466,-75.12725830078125),
+            center: new google.maps.LatLng(40.0,-75.12),
             zoom: 12,
             mapTypeId:google.maps.MapTypeId.SATELLITE,
             mapTypeControl:false,
@@ -55,8 +55,8 @@
                 stylers:[
                     { invert_lightness:true },
                     { weight:1 },
-                    { saturation:-20 },
-                    { lightness:-10 }
+                    { saturation:-100 },
+                    { lightness:-40 }
                 ]
             },
             {
@@ -85,13 +85,13 @@
             cumulative: true,
             resolution: 2,
             steps: 100,
-            fps: 25,
+            fps: 40,
             fitbounds: false,
             clock: false,
-            blendmode: 'source-over',
-            trails: true,
-            point_type:'square',
-            cellsize:2
+            blendmode: 'lighter',
+            trails: false,
+            point_type:'circle',
+            cellsize:1
         }
 
         var torque = null;
